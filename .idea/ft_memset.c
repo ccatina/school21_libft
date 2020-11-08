@@ -6,11 +6,11 @@
 /*   By: ccatina <ccatina@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 17:02:19 by ccatina           #+#    #+#             */
-/*   Updated: 2020/11/03 17:16:46 by ccatina          ###   ########.fr       */
+/*   Updated: 2020/11/03 17:27:29 by ccatina          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib>
+#include <stdlib.h>
 
 void    *memset(void *buf, int ch, size_t count){
     size_t i;
