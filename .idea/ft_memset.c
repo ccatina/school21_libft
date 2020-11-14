@@ -6,13 +6,13 @@
 /*   By: ccatina <ccatina@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 17:02:19 by ccatina           #+#    #+#             */
-/*   Updated: 2020/11/03 17:27:29 by ccatina          ###   ########.fr       */
+/*   Updated: 2020/11/10 23:37:06 by ccatina          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-void    *memset(void *buf, int ch, size_t count){
+void    *ft_memset(void *buf, int ch, size_t count){
     size_t i;
 
     i = 0;
@@ -20,5 +20,5 @@ void    *memset(void *buf, int ch, size_t count){
         ((unsigned char*)buf)[i] = (unsigned char)ch;
         i++;
     }
-    return buf;
+    return (buf);
 }
