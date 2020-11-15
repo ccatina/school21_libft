@@ -14,9 +14,12 @@
 
 // size_t  ft_strlcat (char *dst, const char *src, size_t size){
 //     size_t  srcl;
+//     size_t  dstl;
+//     size_t  i;
 
 //     srcl = ft_strlen(src);
-    
+//     dstl = ft_strlen(dst);
+//     if (size > )
 
 
 
