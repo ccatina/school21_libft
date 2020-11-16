@@ -6,14 +6,14 @@
 /*   By: ccatina <ccatina@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/08 19:01:07 by ccatina           #+#    #+#             */
-/*   Updated: 2020/11/08 23:03:15 by ccatina          ###   ########.fr       */
+/*   Updated: 2020/11/16 21:15:59 by ccatina          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 int ft_memcmp(const void *buf1, const void *buf2, size_t count){
-    
+
     size_t  i;
 
     i = 0;

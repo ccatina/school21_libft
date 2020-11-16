@@ -6,14 +6,14 @@
 /*   By: ccatina <ccatina@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 23:19:30 by ccatina           #+#    #+#             */
-/*   Updated: 2020/11/14 23:21:13 by ccatina          ###   ########.fr       */
+/*   Updated: 2020/11/16 10:56:19 by ccatina          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 int ft_isdigit(int ch){
-    if (ch >= 0 && ch < 58)
+    if (ch >= '0' && ch <= '9')
         return 1;
     return 0;
 }

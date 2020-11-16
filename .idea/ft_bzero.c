@@ -5,18 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccatina <ccatina@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/03 17:19:59 by ccatina           #+#    #+#             */
-/*   Updated: 2020/11/08 23:06:12 by ccatina          ###   ########.fr       */
+/*   Created: 2020/11/16 14:53:01 by ccatina           #+#    #+#             */
+/*   Updated: 2020/11/16 21:30:06 by ccatina          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_bzero(void *s, size_t  n ){
+void    ft_bzero(void *s, size_t n)
+{
     size_t  i;
 
     i = 0;
-    while (i < n){
+    while (i < n)
+    {
         ((unsigned char*)s)[i] = 0;
         i++;
     }

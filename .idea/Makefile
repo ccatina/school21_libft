@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-Wall -Wextra -Werror -c
+CFLAGS=-Wall -Wextra -Werror -I.
 SOURCES=ft*.c
 OBJECTS=*.o
 NAME=libft.a
@@ -10,7 +10,7 @@ $(NAME): $(SOURCES) libft.h
 all: $(NAME)
 
 so:
-	$(CC)-fPIC -c $(CFLAGS) $(SOURCES)
+	$(CC) -c $(CFLAGS) $(SOURCES)
 	$(CC) -shared -o libft.so $(OBJECTS)
 
 clean:
