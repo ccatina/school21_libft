@@ -6,14 +6,15 @@
 /*   By: ccatina <ccatina@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 23:15:48 by ccatina           #+#    #+#             */
-/*   Updated: 2020/11/16 21:26:07 by ccatina          ###   ########.fr       */
+/*   Updated: 2020/11/17 17:46:22 by ccatina          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalpha(int ch){
-    if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
-        return 1;
-    return 0;
+int		ft_isalpha(int ch)
+{
+	if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+		return (1);
+	return (0);
 }

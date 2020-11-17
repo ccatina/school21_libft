@@ -6,17 +6,18 @@
 /*   By: ccatina <ccatina@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/08 23:10:30 by ccatina           #+#    #+#             */
-/*   Updated: 2020/11/10 23:44:46 by ccatina          ###   ########.fr       */
+/*   Updated: 2020/11/17 18:10:46 by ccatina          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t  ft_strlen(const char *str){
-    size_t  i;
+size_t	ft_strlen(const char *str)
+{
+	size_t	i;
 
-    i = 0;
-    while (*str++)
-        i++;
-    return i;
+	i = 0;
+	while (*str++)
+		i++;
+	return (i);
 }

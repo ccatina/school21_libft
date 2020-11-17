@@ -6,14 +6,15 @@
 /*   By: ccatina <ccatina@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 23:25:51 by ccatina           #+#    #+#             */
-/*   Updated: 2020/11/14 23:27:17 by ccatina          ###   ########.fr       */
+/*   Updated: 2020/11/17 17:49:29 by ccatina          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int ch){
-    if (ch >= 0 && ch <= 127)
-        return 1;
-    return 0;
+int		ft_isascii(int ch)
+{
+	if (ch >= 0 && ch <= 127)
+		return (1);
+	return (0);
 }
