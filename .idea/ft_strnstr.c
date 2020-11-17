@@ -6,7 +6,7 @@
 /*   By: ccatina <ccatina@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 22:11:51 by ccatina           #+#    #+#             */
-/*   Updated: 2020/11/16 18:46:52 by ccatina          ###   ########.fr       */
+/*   Updated: 2020/11/16 23:49:31 by ccatina          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ char    *ft_strnstr(const char *s, const char *find, size_t slen)
         if (s[i-1] != find[j])
             continue;
         a = (char *)&(s[i-1]);
-        while (find[j++] != '\0')
+        while ((find[j++] != '\0'))
         {
-            if (s[i-1] != find[j-1])
+            if ((s[i-1] != find[j-1]) || (i >= slen))
                 return NULL;
             i++;
         }

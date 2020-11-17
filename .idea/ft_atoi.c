@@ -6,7 +6,7 @@
 /*   By: ccatina <ccatina@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 17:46:49 by ccatina           #+#    #+#             */
-/*   Updated: 2020/11/16 21:24:09 by ccatina          ###   ########.fr       */
+/*   Updated: 2020/11/16 23:14:59 by ccatina          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ int ft_atoi(const char *str)
 			str[i] == '\f' || str[i] == '\r' || str[i] == ' ')
             i++;
     flag = (str[i] == '-') ? -1 : 1;
-    (flag == -1) ? i++ : i;
+    if (str[i] == '+' || str[i] == '-')
+        i++;
     count = 0;
     while ((str[i] >= '0') && (str[i] <= '9'))
         count = (count * 10) + (str[i++] - '0');
