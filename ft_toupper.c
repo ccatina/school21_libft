@@ -12,8 +12,9 @@
 
 #include "libft.h"
 
-int ft_toupper(int ch){
-    if ((ft_isalpha(ch) != 0) && (ch > 96 && ch < 123))
-        return (ch - 32);
-    return ch;
+int		ft_toupper(int ch)
+{
+	if ((ft_isalpha(ch) != 0) && (ch > 96 && ch < 123))
+		return (ch - 32);
+	return ch;
 }

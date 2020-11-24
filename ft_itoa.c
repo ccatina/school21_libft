@@ -12,38 +12,38 @@
 
 #include "libft.h"
 
-static int      count(int n)
+static int	count(int n)
 {
-    int     i;
+	int	i;
 
-    i = ((n <= 0) ? 1: 0);
-    while (n)
-    {
-        n /= 10;
-        i++;
-    }
-    return (i);
+	i = ((n <= 0) ? 1 : 0);
+	while (n)
+	{
+		n /= 10;
+		i++;
+	}
+	return (i);
 }
 
-char    *ft_itoa(int n)
+char		*ft_itoa(int n)
 {
-    int     size;
-    int     sign;
-    char    *str;
-    unsigned int nb;
+	int		size;
+	int		sign;
+	char		*str;
+	unsigned int	nb;
 
-    size = count(n);
-    sign = (n < 0) ? 1: 0;
-    nb = (n < 0) ? -n : n;
-    if (!(str = (char *)malloc(sizeof(char) * (size + 1))))
-        return (NULL);
-    str[size] = '\0';
-    while (size)
-    {
-        str[--size] = nb % 10 + '0';
-        nb /= 10;
-    }
-    if (sign == 1)
-        str[0] = '-';
-    return (str);
+	size = count(n);
+	sign = (n < 0) ? 1 : 0;
+	nb =  (n < 0) ? -n : n;
+	if (!(str = (char *)malloc(sizeof(char) * (size + 1))))
+		return (NULL);
+	str[size] = '\0';
+	while (size)
+	{
+		str[--size] = nb % 10 + '0';
+		nb /= 10;
+	}
+	if (sign == 1)
+		str[0] = '-';
+	return (str);
 }

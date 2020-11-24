@@ -12,8 +12,9 @@
 
 #include "libft.h"
 
-int ft_tolower(int ch){
-    if ((ft_isalpha(ch) != 0) && (ch > 64 && ch < 91))
-        return (ch + 32);
-    return ch;
+int		ft_tolower(int ch)
+{
+	if ((ft_isalpha(ch) != 0) && (ch > 64 && ch < 91))
+		return (ch + 32);
+	return (ch);
 }

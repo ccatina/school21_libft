@@ -12,68 +12,70 @@
 
 #include "libft.h"
 
-static int      check(char const *s, char c)
+static int	check(char const *s, char c)
 {
-    size_t  count;
-    size_t  i;
+	size_t	count;
+	size_t	i;
 
-    count = 0;
-    i = -1;
-    while (s[++i])
-        if (s[i] == c)
-            count++;
-    return (count);
+	count = 0;
+	i = -1;
+	while (s[++i])
+		if (s[i] == c)
+			count++;
+	return (count);
 }
 
-static char **freestr(char **s)
+static char	**freestr(char **s)
 {
-    size_t  i;
+	size_t	i;
 
-    i = -1;
-    while (s[++i])
-        free(s[i]);
-    free(*s);
-    return (NULL);
+	i = -1;
+	while (s[++i])
+		free(s[i]);
+	free(*s);
+	return (NULL);
 }
 
-static int  len(char const *s, char c)
+static int	len(char const *s, char c)
 {
-    size_t  i;
-    size_t  count;
+	size_t	i;
+	size_t	count;
 
-    i = -1;
-    count = 0;
-    while (s[++i] && s[i] != c)
-        count++;
-    return (count);
-
-}
-
-char    **ft_split(char const *s, char c)
-{
-    char    **str;
-    size_t  i;
-    size_t  j;
-    size_t  flag;
-
-    i = -1;
-    j = -1;
-    flag = 1;
-    if (!s || !(str = (char**)malloc(sizeof(char*)
-            * (check(s,c) + 1))))
-        return (NULL);
-    while (s[++i])
-    {
-        if (!flag && s[i] == c && s[i + 1] != c && s[i + 1])
-            flag = 1;
-        if (s[i] != c && flag)
+	i = 0;
+	count = 0;
+	while (s[i] && s[i] != c)
         {
-            if (!(str[++j] = ft_substr(s + i, 0, len(s+i,c))))
-                return (freestr(str));
-            flag = 0;
+          count++;
+          i++;
+          
         }
-    }
-    str[++j] = NULL;
-    return (str);
+	return (count);
+}
 
+char		**ft_split(char const *s, char c)
+{
+	char	**str;
+	size_t	i;
+	size_t	j;
+	size_t	flag;
+
+	i = -1;
+	j = -1;
+	flag = 1;
+	if (!s || !(str = (char**)malloc(sizeof(char*)
+	* (check(s, c) + 1))))
+		return (NULL);
+	while (s[++i])
+	{
+		if (!flag && s[i] == c && s[i + 1] != c && s[i + 1])
+			flag = 1;
+		if (s[i] != c && flag)
+		{
+			if (!(str[++j] = ft_substr(s + i, 0, len(s + i, c))))
+				return (freestr(str));
+			flag = 0;
+		}
+	}
+	str[++j] = NULL;
+	return (str);
 }
