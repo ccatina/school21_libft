@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccatina <ccatina@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -27,14 +27,14 @@ static int	count(int n)
 
 char		*ft_itoa(int n)
 {
-	int		size;
-	int		sign;
-	char		*str;
+	int				size;
+	int				sign;
+	char			*str;
 	unsigned int	nb;
 
 	size = count(n);
 	sign = (n < 0) ? 1 : 0;
-	nb =  (n < 0) ? -n : n;
+	nb = (n < 0) ? -n : n;
 	if (!(str = (char *)malloc(sizeof(char) * (size + 1))))
 		return (NULL);
 	str[size] = '\0';

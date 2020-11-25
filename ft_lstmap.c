@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccatina <ccatina@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -15,19 +15,20 @@
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new;
-	t_list	*tmp;
+	t_list	*add;
 
-	if (!lst || !f || !del)
+	if (lst == NULL || f == NULL)
 		return (NULL);
 	new = NULL;
-	while (lst != NULL)
+	while (lst)
 	{
-		if (!(tmp = ft_lstnew(f(lst->content))))
+		if (!(add = ft_lstnew((*f)(lst->content))))
 		{
 			ft_lstclear(&new, del);
 			return (NULL);
 		}
-		ft_lstadd_back(&new, tmp);
+		ft_lstadd_back(&new, add);
+		add = add->next;
 		lst = lst->next;
 	}
 	return (new);

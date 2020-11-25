@@ -14,14 +14,20 @@
 
 static int	check(char const *s, char c)
 {
-	size_t	count;
-	size_t	i;
+	int	count;
+	int	i;
 
-	count = 0;
+	if (!s[0])
+		return (0);
+	count = 1;
 	i = -1;
 	while (s[++i])
-		if (s[i] == c)
+	{
+		if (s[i] == c && s[i] && s[i + 1] != c)
 			count++;
+	}
+	if (s[0] == c || s[i - 1] == c)
+		count--;
 	return (count);
 }
 
@@ -44,26 +50,25 @@ static int	len(char const *s, char c)
 	i = 0;
 	count = 0;
 	while (s[i] && s[i] != c)
-        {
-          count++;
-          i++;
-          
-        }
+	{
+		count++;
+		i++;
+	}
 	return (count);
 }
 
 char		**ft_split(char const *s, char c)
 {
 	char	**str;
-	size_t	i;
-	size_t	j;
-	size_t	flag;
+	int		i;
+	int		j;
+	int		flag;
 
 	i = -1;
 	j = -1;
 	flag = 1;
-	if (!s || !(str = (char**)malloc(sizeof(char*)
-	* (check(s, c) + 1))))
+	if (!s || !(str = (char **)malloc(sizeof(char*)
+			* (check(s, c) + 1))))
 		return (NULL);
 	while (s[++i])
 	{

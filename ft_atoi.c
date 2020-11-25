@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+
 #include <limits.h>
 
 static int	ft_limits(long long i)
@@ -22,17 +23,17 @@ static int	ft_limits(long long i)
 	return (2);
 }
 
-int		ft_atoi(const char *str)
+int			ft_atoi(const char *str)
 {
-	long long int	count;
+	long long	count;
 	size_t		i;
-	int		flag;
-  
+	int			flag;
+
 	i = 0;
 	if (str[i] == '\0')
 		return (0);
 	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v' ||
-	str[i] == '\f' || str[i] == '\r' || str[i] == ' ')
+		str[i] == '\f' || str[i] == '\r' || str[i] == ' ')
 		i++;
 	flag = (str[i] == '-') ? -1 : 1;
 	if (str[i] == '+' || str[i] == '-')

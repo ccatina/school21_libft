@@ -56,9 +56,9 @@ static int	checkr(char const *s1, char const *set)
 
 char		*ft_strtrim(char const *s1, char const *set)
 {
-	char	*str;
-	int	start;
-	int	end;
+	char		*str;
+	int			start;
+	int			end;
 
 	if (!s1)
 		return (NULL);
