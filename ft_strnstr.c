@@ -18,22 +18,20 @@ char	*ft_strnstr(const char *s, const char *find, size_t slen)
 	size_t	j;
 	char	*a;
 
-	i = -1;
-	j = 0;
-	if (!find[j])
+	i = 0;
+	a = (char *)s;
+	if (!ft_strlen(find))
 		return ((char *)s);
-	while ((++i < slen) && (find[j]))
+	while ((i < slen) && (s[i]))
 	{
-		if (s[i] != find[j])
-			continue;
-		a = (char *)&(s[i]);
-		while (find[j++])
+		j = 0;
+		while ((find[j] == s[i + j]) && ((i + j) < slen))
 		{
-			if ((s[i] != find[j - 1]) || (i >= slen))
-				return (NULL);
-			i++;
+			if (!(find[j + 1]))
+				return (a + i);
+			j++;
 		}
-		return (a);
+		i++;
 	}
 	return (NULL);
 }
